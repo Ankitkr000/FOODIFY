@@ -12,10 +12,11 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    origin:"https://foodify-flame-mu.vercel.app",
-     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials:true
-}))
+    origin: "https://foodify-flame-mu.vercel.app", 
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+}));
 const authRouter=require("./Routes/auth.routes");
 const userRoute=require("./Routes/user.routes")
 const shopRoute=require("./Routes/shop.routes")
