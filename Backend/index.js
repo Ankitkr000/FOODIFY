@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    origin:"foodify-flame-mu.vercel.app",
+    origin:"https://foodify-flame-mu.vercel.app",
      methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials:true
 }))
